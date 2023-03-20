@@ -44,19 +44,13 @@ def accuracy(predictions, targets):
     TODO:
     Implement accuracy computation.
     """
-    
-    ########################
-    # PUT YOUR CODE HERE  #
-    #######################
+
     a = (predictions.max(dim=1)[1] == targets).sum()
     print(a)
     b = targets.shape[0]
     print(b)
     accuracy = a.item()/b
-    ########################
-    # END OF YOUR CODE    #
-    #######################
-    
+
     return accuracy
 
 def var_init(model, std=0.01):
@@ -148,13 +142,6 @@ def train():
     plt.plot(np.arange(len(loss_list)), loss_list)
     plt.xlabel('Step')
     plt.ylabel('Loss')
-    #
-    ########################
-    # PUT YOUR CODE HERE  #
-    #######################
-    ########################
-    # END OF YOUR CODE    #
-    #######################
 
 
 def print_flags():

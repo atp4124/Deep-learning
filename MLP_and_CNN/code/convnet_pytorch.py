@@ -50,10 +50,6 @@ class ConvNet(nn.Module):
         TODO:
         Implement initialization of the network.
         """
-        
-        ########################
-        # PUT YOUR CODE HERE  #
-        #######################
 
         self.net = nn.Sequential(nn.Conv2d(n_channels, 64, kernel_size=3, padding=1, stride=1),
                                  PreActBlock(64, 64),
@@ -79,11 +75,6 @@ class ConvNet(nn.Module):
                                  nn.Linear(512, n_classes))
 
 
-        ########################
-        # END OF YOUR CODE    #
-        #######################
-
-
     
     def forward(self, x):
         """
@@ -98,14 +89,6 @@ class ConvNet(nn.Module):
         TODO:
         Implement forward pass of the network.
         """
-        
-        ########################
-        # PUT YOUR CODE HERE  #
-        #######################
-
-        ########################
-        # END OF YOUR CODE    #
-        #######################
 
         out = self.net(x)
         return out
